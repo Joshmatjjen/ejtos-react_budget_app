@@ -1,14 +1,12 @@
 import React, { useState, useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
-const Location = () => {
+const Currency = () => {
     const {currency, dispatch } = useContext(AppContext);
 
-    const [selectedCurrency, setSelectedCurrency] = useState("Select");
-
-    const changeLocation = (val) => {
+    const changeCurrency = (val) => {
         dispatch({
-            type: 'CHG_LOCATION',
+            type: 'CHG_CURRENCY',
             payload: val,
         })
     }
@@ -37,13 +35,13 @@ const Location = () => {
             </a>
 
             <ul class="dropdown-menu" style={{ background: '#84E187' }}>
-                <li><a class="dropdown-item" href="#" onClick={() => setSelectedCurrency("$ Dollar")} >$ Dollar</a></li>
-                <li><a class="dropdown-item" href="#" onClick={() => setSelectedCurrency("£ Pound")} >£ Pound</a></li>
-                <li><a class="dropdown-item" href="#" onClick={() => setSelectedCurrency("€ Euro")} >€ Euro</a></li>
-                <li><a class="dropdown-item" href="#" onClick={() => setSelectedCurrency("₹ Ruppee")} >₹ Ruppee</a></li>
+                <li><a class="dropdown-item" href="#" onClick={() => changeCurrency("$")} >$ Dollar</a></li>
+                <li><a class="dropdown-item" href="#" onClick={() => changeCurrency("£")} >£ Pound</a></li>
+                <li><a class="dropdown-item" href="#" onClick={() => changeCurrency("€")} >€ Euro</a></li>
+                <li><a class="dropdown-item" href="#" onClick={() => changeCurrency("₹")} >₹ Ruppee</a></li>
             </ul>
         </div>
     );
 };
 
-export default Location;
+export default Currency;
