@@ -50,7 +50,7 @@ const App = () => {
                 </div>
                 <div className='row mt-3'>
 
-
+                <h3 className='mt-3'>Allocation</h3>
 
 
                     {
@@ -63,7 +63,7 @@ const App = () => {
                     
                 </div>
                 <div className='row mt-3'>
-
+                <h3 className='mt-3'>Change allocation</h3>
                     {
                         //AllocationForm component
                         <div className='col-sm'>
